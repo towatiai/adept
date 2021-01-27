@@ -1,0 +1,16 @@
+{
+    "extends": "@tsconfig/svelte/tsconfig.json",
+    "compilerOptions": {
+        //"module": "commonjs",
+        "noImplicitAny": true,
+        "sourceMap": true,
+        "outDir": "dist",
+        "baseUrl": ".",
+        "paths": {
+          "*": ["node_modules/*"],
+          "dpt/*": ["./src/dpt/*"]
+        }
+      },
+    "include": ["src/dpt/*", "src/node_modules", "tsconfig.json"],
+    "exclude": ["node_modules/*", "__sapper__/*", "public/*"]
+}
