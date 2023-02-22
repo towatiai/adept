@@ -10,6 +10,9 @@
 {#await files}
 Loading..
 {:then components}
+{#if components.length === 0}
+No installation files
+{:else}
 <Tabs value={components[0].file}>
     <TabsList>
         { #each components as component}
@@ -30,4 +33,5 @@ Loading..
     </TabsContent>
     {/each}
 </Tabs>
+{/if}
 {/await}
