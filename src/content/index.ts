@@ -5,3 +5,7 @@ export async function getContent(file: string) {
         return null;
     }
 }
+
+export async function getContents() {
+    return import.meta.glob('./markdown/*.md');
+}
