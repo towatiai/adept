@@ -46,7 +46,6 @@
 		"svelte-floating-ui": "^1.2.8",
 		"svelte-highlight": "^7.2.0",
 		"tailwind-merge": "^1.10.0",
-		"tailwindcss-animate": "^1.0.5",
 		"teil-ui": "^0.0.1",
 		"vite-tsconfig-paths": "^4.0.5"
 	}
