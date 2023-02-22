@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { PageData } from "./$types";
     import ExampleBox from "$lib/docs/ExampleBox.svelte";
-	import InstallationFiles from "$lib/docs/InstallationFiles.svelte";
+	import FilePreview from "$lib/docs/FilePreview.svelte";
     
     export let data: PageData;
 </script>
@@ -28,7 +28,7 @@
             Copy and paste the following code into your project.
         </p>
 
-        <InstallationFiles files={data.lazy.files}/>
+        <FilePreview files={data.lazy.files}/>
     </div>
 
     <nav class="hidden xl:block text-sm py-6 sticky top-16 h-[calc(100vh-3.5rem)]">

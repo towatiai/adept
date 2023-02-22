@@ -2,8 +2,9 @@
 	import { cn } from "$lib/utils";
     import { Tabs } from "teil-ui";
     import type { ContentProps } from "teil-ui/components/Tabs/Content.svelte";
+    import type { HTMLAttributes } from "svelte/elements";
 
-    interface $$Props extends ContentProps {};
+    interface $$Props extends ContentProps, HTMLAttributes<HTMLDivElement> {};
     $: props = $$props as $$Props;
 </script>
 
