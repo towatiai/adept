@@ -1,5 +1,5 @@
 const componentsSvelte = import.meta.glob('./ui/**/*.svelte', { as: 'raw' });
-const componentsTs = import.meta.glob('./ui/**/*.svelte', { as: 'raw' });
+const componentsTs = import.meta.glob('./ui/**/*.ts', { as: 'raw' });
 
 export async function getComponentFiles(files: string[]) {
     if (!files?.length) {
