@@ -5,6 +5,11 @@
     
     export let data: PageData;
 </script>
+
+<svelte:head>
+    <title>{data.attributes.title} - Adept</title>
+</svelte:head>
+
 <div class="xl:grid xl:grid-cols-[minmax(0,1fr)_280px] gap-6">
     <div class="py-6">
         <h1 class="text-[48px] font-extrabold">{data.attributes.title}</h1>
