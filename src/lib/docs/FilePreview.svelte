@@ -2,6 +2,7 @@
     import { HighlightSvelte} from "svelte-highlight";
     import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 	import Button from "@/components/ui/Button.svelte";
+    import { IconBrandSvelte, IconBrandTypescript } from "@tabler/icons-svelte";
 
     export let files: Promise<{ file: string, content: string}[]>;
 
@@ -18,7 +19,15 @@ No installation files
     <div class="max-w-[100%] overflow-y-auto pb-2">
         <TabsList>
             { #each components as component}
-            <TabsTrigger value={component.file}>{component.file}</TabsTrigger>
+            <TabsTrigger value={component.file}>
+                { @const filetype = component.file.split('.').at(-1)}
+                { #if filetype === "svelte" }
+                <IconBrandSvelte class="w-4 h-4 mr-2 text-orange-600" />
+                {:else if filetype === "ts" }
+                <IconBrandTypescript class="w-4 h-4 mr-2 text-blue-600"/>
+                { /if }
+                {component.file.split('.').at(0)}
+            </TabsTrigger>
             {/each}
         </TabsList>
     </div>
