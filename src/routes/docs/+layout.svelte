@@ -1,14 +1,12 @@
 <script lang="ts">
-	import type { PageData } from "./$types";
+	import type { LayoutData } from "./$types";
 	import { page } from "$app/stores";
 
-    export let data: PageData;
-
-    console.log(data);
+    export let data: LayoutData;
 </script>
 
-<div class="grid grid-cols-[220px_minmax(0,1fr)] gap-10 px-4">
-    <aside class="border-r border-slate-200 py-6 pr-4 sticky top-16 shrink-0 w-full h-[calc(100vh-3.5rem)]">
+<div class="grid grid-cols-1 md:grid-cols-[220px_minmax(0,1fr)] gap-10 px-4">
+    <aside class="hidden md:block border-r border-slate-200 py-6 pr-4 sticky top-16 shrink-0 w-full h-[calc(100vh-3.5rem)]">
         <div>
             <h4 class="text-sm font-semibold mb-2 pl-2">Components</h4>
             <div class="flex flex-col text-sm">

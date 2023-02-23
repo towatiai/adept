@@ -12,7 +12,7 @@
 
 <div class="xl:grid xl:grid-cols-[minmax(0,1fr)_280px] gap-6">
     <div class="py-6">
-        <h1 class="text-[48px] font-extrabold">{data.attributes.title}</h1>
+        <h1 class="text-[36px] md:text-[48px] font-extrabold">{data.attributes.title}</h1>
 
         <p class="max-w-[95%]">
             { data.attributes.description }

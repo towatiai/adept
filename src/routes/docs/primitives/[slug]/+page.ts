@@ -16,7 +16,7 @@ export const load = (async ({ params }) => {
         ...docs,
         lazy: {
             source: getCode(docs.attributes.example),
-            files: getComponentFiles(docs.attributes.files)
+            files: getComponentFiles(docs.attributes.files, docs.attributes.baseDir)
         }
     };
  
