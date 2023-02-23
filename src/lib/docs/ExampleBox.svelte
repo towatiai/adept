@@ -33,7 +33,7 @@
         { #await source}
         <span>Loading...</span>
         {:then code}
-        <HighlightSvelte {code} />
+        <HighlightSvelte {code} class="text-sm"/>
         {:catch error}
         <span>{error}</span>
         {/await}
@@ -44,9 +44,5 @@
 <style>
     :global(.hljs) {
         min-height: 350px;
-    }
-
-    :global(code) {
-        font-size: 0.85rem;
     }
 </style>

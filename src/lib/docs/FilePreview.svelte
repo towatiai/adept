@@ -15,14 +15,16 @@ Loading..
 No installation files
 {:else}
 <Tabs value={components[0].file}>
-    <TabsList>
-        { #each components as component}
-        <TabsTrigger value={component.file}>{component.file}</TabsTrigger>
-        {/each}
-    </TabsList>
+    <div class="max-w-[100%] overflow-y-auto pb-2">
+        <TabsList>
+            { #each components as component}
+            <TabsTrigger value={component.file}>{component.file}</TabsTrigger>
+            {/each}
+        </TabsList>
+    </div>
     { #each components as component}
-    <TabsContent value={component.file} class="p-0 relative {open ? 'overflow-auto max-h-[auto]' : 'overflow-hidden max-h-36'}">
-        <HighlightSvelte code={component.content} class="source" />
+    <TabsContent value={component.file} class="p-0 m-0 relative {open ? 'overflow-auto max-h-[auto]' : 'overflow-hidden max-h-36'}">
+        <HighlightSvelte code={component.content} class="source text-sm" />
         <div class="absolute bg-gradient-to-t from-slate-900/90 to-slate-900/30 {open ? 'bottom-0 inset-x-0' : 'inset-0'}">
             <div class="absolute bottom-3 flex justify-center inset-x-0">
                 <Button variant="subtle" size="sm" class="h-8" on:click={() => open = !open }>
