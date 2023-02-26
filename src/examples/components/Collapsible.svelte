@@ -19,7 +19,7 @@
 	<div class="rounded-md border border-slate-200 px-4 py-3 font-mono text-sm dark:border-slate-700">
 		@radix-ui/primitives
 	</div>
-	<CollapsibleContent className="space-y-2">
+	<CollapsibleContent class="space-y-2">
 		<div class="rounded-md border border-slate-200 px-4 py-3 font-mono text-sm dark:border-slate-700">
 			@radix-ui/colors
 		</div>
