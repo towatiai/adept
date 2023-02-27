@@ -23,9 +23,7 @@
             { #await getExample(example)}
             <span>Loading...</span>
             {:then example}
-            <div>
-                <svelte:component this={example}></svelte:component>
-            </div>
+            <svelte:component this={example}></svelte:component>
             {:catch error}
             <div class="bg-red-100 border border-red-500 py-6 px-4 rounded-md text-red-800">
                 <h3 class="font-semibold">Error 404</h3>
