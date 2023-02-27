@@ -1,4 +1,6 @@
-const cache: {[key: string]: { component?: ConstructorOfATypedSvelteComponent, code?: string }} = {};
+import type { SvelteComponent } from "svelte";
+
+const cache: {[key: string]: { component?: SvelteComponent, code?: string }} = {};
 
 export async function getExample(file: string) {
     if (cache[file]?.component) return cache[file].component;
